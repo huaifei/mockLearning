@@ -12,6 +12,11 @@ import { DashboardComponent }  from './dashboard.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { AppRoutingModule }     from './app-routing.module';
 
+import { ActivityComponent }  from './tabs/activity/activity.component';
+import { EventDetailsComponent }  from './tabs/eventDetails/eventDetails.component';
+import { ParticipantComponent }  from './tabs/participant/participant.component';
+import { VenueComponent }  from './tabs/venue/venue.component';
+
 import { HeroService } from './hero.service';
 
 
@@ -47,6 +52,8 @@ import { HeroService } from './hero.service';
     HeroesComponent,
     HeroDetailComponent,
     DashboardComponent,
+    ParticipantComponent,
+    VenueComponent
   ],
   providers:    [
     HeroService

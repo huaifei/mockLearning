@@ -21,7 +21,7 @@ export class HeroDetailComponent implements OnInit{
     private location: Location
   ) {}
 
-  @Input() hero:Hero[];
+  // @Input() hero:Hero[];
 
   ngOnInit():void{
     this.route.params

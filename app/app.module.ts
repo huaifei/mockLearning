@@ -7,12 +7,13 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent }  from './app.component';
-import { HeroesComponent }  from './heroes.component';
-import { DashboardComponent }  from './dashboard.component';
-import { HeroDetailComponent } from './hero-detail.component';
+// import { HeroesComponent }  from './heroes.component';
+// import { DashboardComponent }  from './dashboard.component';
+// import { HeroDetailComponent } from './hero-detail.component';
 import { AppRoutingModule }     from './app-routing.module';
 
 import { ActivityComponent }  from './tabs/activity/activity.component';
+import { AtopComponent }  from './tabs/activity/atop.component';
 import { EventDetailsComponent }  from './tabs/eventDetails/eventDetails.component';
 import { ParticipantComponent }  from './tabs/participant/participant.component';
 import { VenueComponent }  from './tabs/venue/venue.component';
@@ -49,11 +50,14 @@ import { HeroService } from './hero.service';
   ],
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    DashboardComponent,
+    // HeroesComponent,
+    // HeroDetailComponent,
+    // DashboardComponent,
+    ActivityComponent,
+    EventDetailsComponent,
     ParticipantComponent,
-    VenueComponent
+    VenueComponent,
+    AtopComponent,
   ],
   providers:    [
     HeroService

@@ -55,4 +55,22 @@ export class HeroService {
     return this.getHero().then(heroes => heroes.find(hero => hero.id === id))
   }
 
+
+  // ngOnInit() {
+  //   this.heroes = this.route.params
+  //     .switchMap((params: Params) => {
+  //       this.selectedId = +params['id'];
+  //       return this.service.getHeroes();
+  //     });
+  // }
+
+  // ngOnInit() {
+  //   this.route.params
+  //   // (+) converts string 'id' to a number
+  //     .switchMap((params: Params) => this.service.getHero(+params['id']))
+  //     .subscribe((hero: Hero) => this.hero = hero);
+  // }
+
+
+
 }

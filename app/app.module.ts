@@ -13,7 +13,7 @@ import { AppComponent }  from './app.component';
 import { AppRoutingModule }     from './app-routing.module';
 
 
-/* -- mock Learning Events -- */
+/* -- mock tabs Events -- */
 import { ActivityComponent }  from './tabs/activity/activity.component';
 import { AtopComponent }  from './tabs/activity/atop.component';
 import { EventDetailsComponent }  from './tabs/eventDetails/eventDetails.component';

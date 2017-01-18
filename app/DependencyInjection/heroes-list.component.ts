@@ -31,6 +31,7 @@ export class HeroesListComponent {
   constructor(heroesService:HeroesService) {
     this.heroes = heroesService.getHeroes()
       .map(item => new EditItem(item));
+    console.log(this.heroes);
   }
 
   onSaved (editItem:EditItem<Hero>, updatedHero:Hero){

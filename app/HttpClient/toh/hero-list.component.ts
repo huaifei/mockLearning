@@ -31,7 +31,7 @@ export class HeroListComponent implements OnInit {
 
   addHero (name: string) {
     if (!name) { return; }
-    this.heroService.addHero(name)
+    this.heroService.addHeroes(name)
       .subscribe(
         hero  => this.heroes.push(hero),
         error =>  this.errorMessage = <any>error);

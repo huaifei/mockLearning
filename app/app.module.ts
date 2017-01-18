@@ -2,26 +2,28 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule,JsonpModule } from '@angular/http';
+import { InMemoryWebApiModule }     from 'angular-in-memory-web-api';
 
 /* about origin demo */
-// import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { InMemoryDataService }  from './in-memory-data.service';
-
-// import { AppComponent }  from './app.component';
 // import { HeroesComponent }  from './heroes.component';
 // import { DashboardComponent }  from './dashboard.component';
 // import { HeroDetailComponent } from './hero-detail.component';
+// import { AppComponent }  from './app.component';
 // import { AppRoutingModule }     from './app-routing.module';
+// import { HeroService } from './hero.service';
 
 
 /* -- mock tabs Events -- */
-// import { ActivityComponent }  from './tabs/activity/activity.component';
-// import { AtopComponent }  from './tabs/activity/atop.component';
-// import { EventDetailsComponent }  from './tabs/eventDetails/eventDetails.component';
-// import { ParticipantComponent }  from './tabs/participant/participant.component';
-// import { VenueComponent }  from './tabs/venue/venue.component';
-//
-// import { HeroService } from './hero.service';
+import { AppComponent }  from './tabs/app.component';
+import { AppRoutingModule }     from './tabs/app-routing.module';
+import { InMemoryLearningDataService }  from './tabs/in-memory-learning-data.service';
+
+import { ActivityComponent }  from './tabs/activity/activity.component';
+import { AtopComponent }  from './tabs/activity/atop.component';
+import { EventDetailsComponent }  from './tabs/eventDetails/eventDetails.component';
+import { ParticipantComponent }  from './tabs/participant/participant.component';
+import { VenueComponent }  from './tabs/venue/venue.component';
 
 
 /* -- dependency injection -- */
@@ -31,15 +33,14 @@ import { HttpModule,JsonpModule } from '@angular/http';
 // import { HeroesService }  from './DependencyInjection/heroes.service';
 
 /* -- HTTP client demo -- */
-import { InMemoryWebApiModule }     from 'angular-in-memory-web-api';
-import { HeroData }                 from './HttpClient/hero-data';
-
-import { AppComponent }             from './HttpClient/app.component';
-
-import { HeroListComponent }        from './HttpClient/toh/hero-list.component';
-import { HeroListPromiseComponent } from './HttpClient/toh/hero-list.component.promise';
-import { WikiComponent }            from './HttpClient/wiki/wiki.component';
-import { WikiSmartComponent }       from './HttpClient/wiki/wiki-smart.component';
+// import { HeroData }                 from './HttpClient/hero-data';
+//
+// import { AppComponent }             from './HttpClient/app.component';
+//
+// import { HeroListComponent }        from './HttpClient/toh/hero-list.component';
+// import { HeroListPromiseComponent } from './HttpClient/toh/hero-list.component.promise';
+// import { WikiComponent }            from './HttpClient/wiki/wiki.component';
+// import { WikiSmartComponent }       from './HttpClient/wiki/wiki-smart.component';
 
 
 
@@ -48,53 +49,30 @@ import { WikiSmartComponent }       from './HttpClient/wiki/wiki-smart.component
 /* ------------------------------------------------------------------------------------------ */
 
 /* -- mock Learning Events -- */
-// @NgModule({
-//   imports:      [
-//     BrowserModule,
-//     FormsModule,
-//     AppRoutingModule,
-//     HttpModule,
-//     InMemoryWebApiModule.forRoot(InMemoryDataService),
-//     // RouterModule.forRoot([
-//     //   {
-//     //     path: '',
-//     //     redirectTo: '/dashboard',
-//     //     pathMatch: 'full'
-//     //   },
-//     //   {
-//     //     path:'heroes',
-//     //     component:HeroesComponent
-//     //   },
-//     //   {
-//     //     path: 'dashboard',
-//     //     component: DashboardComponent
-//     //   },
-//     //   {
-//     //     path: 'detail/:id',
-//     //     component: HeroDetailComponent
-//     //   },
-//     // ])
-//   ],
-//   declarations: [
-//     AppComponent,
-//     // HeroesComponent,
-//     // HeroDetailComponent,
-//     // DashboardComponent,
-//
-//     ActivityComponent,
-//     EventDetailsComponent,
-//     ParticipantComponent,
-//     VenueComponent,
-//     AtopComponent,
-//
-//   ],
-//   providers:    [
-//     HeroService
-//   ],
-//   bootstrap:    [
-//     AppComponent
-//   ]
-// })
+@NgModule({
+  imports:      [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpModule,
+    InMemoryWebApiModule.forRoot(InMemoryLearningDataService),
+  ],
+  declarations: [
+    AppComponent,
+
+    ActivityComponent,
+    EventDetailsComponent,
+    ParticipantComponent,
+    VenueComponent,
+    AtopComponent,
+  ],
+  providers:    [
+    // HeroService
+  ],
+  bootstrap:    [
+    AppComponent
+  ]
+})
 
 
 
@@ -119,23 +97,23 @@ import { WikiSmartComponent }       from './HttpClient/wiki/wiki-smart.component
 
 
 /* -- HTTP client demo -- */
-@NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    JsonpModule,
-    InMemoryWebApiModule.forRoot(HeroData)
-  ],
-  declarations: [
-    AppComponent,
-    HeroListComponent,
-    HeroListPromiseComponent,
-    WikiComponent,
-    WikiSmartComponent
-  ],
-  bootstrap: [ AppComponent ]
-})
+// @NgModule({
+//   imports: [
+//     BrowserModule,
+//     FormsModule,
+//     HttpModule,
+//     JsonpModule,
+//     InMemoryWebApiModule.forRoot(HeroData)
+//   ],
+//   declarations: [
+//     AppComponent,
+//     HeroListComponent,
+//     HeroListPromiseComponent,
+//     WikiComponent,
+//     WikiSmartComponent
+//   ],
+//   bootstrap: [ AppComponent ]
+// })
 
 
 

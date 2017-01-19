@@ -29,7 +29,7 @@ export class HeroEditorComponent {
   @Output() saved = new EventEmitter<Hero>();
   @Output() canceled = new EventEmitter<Hero>();
 
-  @Input()
+  @Input('hero1')     //括号内绑定了父组件的变量，也可省略括号内内容
   set hero2 (hero2:Hero){
     this.restoreService.setItem(hero2);
   }
@@ -43,8 +43,8 @@ export class HeroEditorComponent {
   }
 
   onCanceled () {
-    this.hero = this.restoreService.restoreItem();
-    this.canceled.emit(this.hero);
+    this.hero2 = this.restoreService.restoreItem();
+    this.canceled.emit(this.hero2);
   }
 
 }

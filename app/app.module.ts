@@ -15,22 +15,22 @@ import { InMemoryWebApiModule }     from 'angular-in-memory-web-api';
 
 
 /* -- mock tabs Events -- */
-import { AppComponent }  from './tabs/app.component';
-import { AppRoutingModule }     from './tabs/app-routing.module';
-import { InMemoryLearningDataService }  from './tabs/in-memory-learning-data.service';
-
-import { ActivityComponent }  from './tabs/activity/activity.component';
-import { AtopComponent }  from './tabs/activity/atop.component';
-import { EventDetailsComponent }  from './tabs/eventDetails/eventDetails.component';
-import { ParticipantComponent }  from './tabs/participant/participant.component';
-import { VenueComponent }  from './tabs/venue/venue.component';
+// import { AppComponent }  from './tabs/app.component';
+// import { AppRoutingModule }     from './tabs/app-routing.module';
+// import { InMemoryLearningDataService }  from './tabs/in-memory-learning-data.service';
+//
+// import { ActivityComponent }  from './tabs/activity/activity.component';
+// import { AtopComponent }  from './tabs/activity/atop.component';
+// import { EventDetailsComponent }  from './tabs/eventDetails/eventDetails.component';
+// import { ParticipantComponent }  from './tabs/participant/participant.component';
+// import { VenueComponent }  from './tabs/venue/venue.component';
 
 
 /* -- dependency injection -- */
-// import { HeroCardComponent }  from './DependencyInjection/hero-card.component';
-// import { HeroEditorComponent }  from './DependencyInjection/hero-editor.component';
-// import { HeroesListComponent }  from './DependencyInjection/heroes-list.component';
-// import { HeroesService }  from './DependencyInjection/heroes.service';
+import { HeroCardComponent }  from './DependencyInjection/hero-card.component';
+import { HeroEditorComponent }  from './DependencyInjection/hero-editor.component';
+import { HeroesListComponent }  from './DependencyInjection/heroes-list.component';
+import { HeroesService }  from './DependencyInjection/heroes.service';
 
 /* -- HTTP client demo -- */
 // import { HeroData }                 from './HttpClient/hero-data';
@@ -49,51 +49,51 @@ import { VenueComponent }  from './tabs/venue/venue.component';
 /* ------------------------------------------------------------------------------------------ */
 
 /* -- mock Learning Events -- */
-@NgModule({
-  imports:      [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryLearningDataService),
-  ],
-  declarations: [
-    AppComponent,
-
-    ActivityComponent,
-    EventDetailsComponent,
-    ParticipantComponent,
-    VenueComponent,
-    AtopComponent,
-  ],
-  providers:    [
-    // HeroService
-  ],
-  bootstrap:    [
-    AppComponent
-  ]
-})
-
-
-
-//     /* -- Dependency Injection -- */
 // @NgModule({
 //   imports:      [
 //     BrowserModule,
 //     FormsModule,
+//     AppRoutingModule,
+//     HttpModule,
+//     InMemoryWebApiModule.forRoot(InMemoryLearningDataService),
 //   ],
 //   declarations: [
-//     HeroCardComponent,
-//     HeroEditorComponent,
-//     HeroesListComponent,
+//     AppComponent,
+//
+//     ActivityComponent,
+//     EventDetailsComponent,
+//     ParticipantComponent,
+//     VenueComponent,
+//     AtopComponent,
 //   ],
 //   providers:    [
-//     HeroesService
+//     // HeroService
 //   ],
 //   bootstrap:    [
-//     HeroesListComponent
+//     AppComponent
 //   ]
 // })
+
+
+
+    /* -- Dependency Injection -- */
+@NgModule({
+  imports:      [
+    BrowserModule,
+    FormsModule,
+  ],
+  declarations: [
+    HeroCardComponent,
+    HeroEditorComponent,
+    HeroesListComponent,
+  ],
+  providers:    [
+    HeroesService
+  ],
+  bootstrap:    [
+    HeroesListComponent
+  ]
+})
 
 
 /* -- HTTP client demo -- */

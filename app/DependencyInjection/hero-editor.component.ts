@@ -14,7 +14,7 @@ import { Hero } from './hero';
 <div>
 
 <span>Name:</span>
-<input [(ngModel)]="hero.name">
+<input [(ngModel)]="hero2.name">
 <div>
 <button (click)="onSaved()">save</button>
 <button (click)="onCanceled()">cancel</button>
@@ -30,11 +30,11 @@ export class HeroEditorComponent {
   @Output() canceled = new EventEmitter<Hero>();
 
   @Input()
-  set hero (hero:Hero){
-    this.restoreService.setItem(hero);
+  set hero2 (hero2:Hero){
+    this.restoreService.setItem(hero2);
   }
 
-  get hero (){
+  get hero2 (){
     return this.restoreService.getItem();
   }
 

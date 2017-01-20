@@ -5,6 +5,7 @@ import { HeroService } from './hero.service';
 import { Router } from '@angular/router';
 
 @Component({
+  moduleId:module.id,
   selector: 'my-hero',
   template: ` <h1>{{title}}</h1>
     <h2>My Heroes</h2>

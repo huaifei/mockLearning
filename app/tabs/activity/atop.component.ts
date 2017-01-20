@@ -1,7 +1,7 @@
 /**
  * Created by huaifei.zhang on 2017/1/13.
  */
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -11,5 +11,5 @@ import { Component } from '@angular/core';
 })
 
 export class AtopComponent {
-
+  @Input('name$') nem:string;
 }

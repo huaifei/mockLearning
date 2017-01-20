@@ -3,10 +3,12 @@
  */
 import { Component } from '@angular/core';
 
+import './rxjs-operators';
+
 @Component({
   selector:'my-app',
   template:`
-<h1>{{title1}} :</h1>
+<!--<h1>{{title1}} :</h1>-->
 <nav>
   <a routerLink="/activity">Activity</a>
   <a routerLink="/eventDetails">EventDetails</a>
@@ -19,5 +21,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent{
-  title1:"MyApp";
+  // title1 = "MyApp";
 }

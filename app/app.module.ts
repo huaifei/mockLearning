@@ -17,12 +17,15 @@ import { InMemoryWebApiModule }     from 'angular-in-memory-web-api';
 /* -- mock tabs Events -- */
 import { AppComponent }  from './tabs/app.component';
 import { AppRoutingModule }     from './tabs/app-routing.module';
+import { EventDetailsRoutingModule }     from './tabs/eventDetails/event.details.module';
 import { InMemoryLearningDataService }  from './tabs/in-memory-learning-data.service';
 
 import { ActivityComponent }  from './tabs/activity/activity.component';
 import { AtopComponent }  from './tabs/activity/atop.component';
 import { CardsComponent }  from './tabs/activity/cards.component';
 import { EventDetailsComponent }  from './tabs/eventDetails/eventDetails.component';
+import { ScheduleComponent } from  './tabs/eventDetails/schedule.component';
+import { PresenterComponent } from './tabs/eventDetails/presenter.component';
 import { ParticipantComponent }  from './tabs/participant/participant.component';
 import { VenueComponent }  from './tabs/venue/venue.component';
 
@@ -49,6 +52,10 @@ import { HeroesService }  from './DependencyInjection/heroes.service';
 // import { PowerBoostCalculatorComponent }     from './Pipe/power-boost-calculator.component';
 
 
+/* on changes demo*/
+// import {OnChangesChildComponent} from './ngOnChanges/on.changes.child.component';
+// import {OnChangesParentComponent} from './ngOnChanges/on.changes.parent.component';
+
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------ */
@@ -60,6 +67,7 @@ import { HeroesService }  from './DependencyInjection/heroes.service';
     FormsModule,
     AppRoutingModule,
     HttpModule,
+    EventDetailsRoutingModule,
     InMemoryWebApiModule.forRoot(InMemoryLearningDataService),
   ],
   declarations: [
@@ -71,6 +79,9 @@ import { HeroesService }  from './DependencyInjection/heroes.service';
     VenueComponent,
     AtopComponent,
     CardsComponent,
+    PresenterComponent,
+    ScheduleComponent,
+
   ],
   providers:    [
     // HeroService

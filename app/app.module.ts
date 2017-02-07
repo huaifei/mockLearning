@@ -56,40 +56,44 @@ import { HeroesService }  from './DependencyInjection/heroes.service';
 // import {OnChangesChildComponent} from './ngOnChanges/on.changes.child.component';
 // import {OnChangesParentComponent} from './ngOnChanges/on.changes.parent.component';
 
+/* -- Form -- */
+import { HeroFormComponent } from './Form/hero-form.component';
+
+
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------ */
 
 /* -- mock Learning Events -- */
-@NgModule({
-  imports:      [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpModule,
-    EventDetailsRoutingModule,
-    InMemoryWebApiModule.forRoot(InMemoryLearningDataService),
-  ],
-  declarations: [
-    AppComponent,
-
-    ActivityComponent,
-    EventDetailsComponent,
-    ParticipantComponent,
-    VenueComponent,
-    AtopComponent,
-    CardsComponent,
-    PresenterComponent,
-    ScheduleComponent,
-
-  ],
-  providers:    [
-    // HeroService
-  ],
-  bootstrap:    [
-    AppComponent
-  ]
-})
+// @NgModule({
+//   imports:      [
+//     BrowserModule,
+//     FormsModule,
+//     AppRoutingModule,
+//     HttpModule,
+//     EventDetailsRoutingModule,
+//     InMemoryWebApiModule.forRoot(InMemoryLearningDataService),
+//   ],
+//   declarations: [
+//     AppComponent,
+//
+//     ActivityComponent,
+//     EventDetailsComponent,
+//     ParticipantComponent,
+//     VenueComponent,
+//     AtopComponent,
+//     CardsComponent,
+//     PresenterComponent,
+//     ScheduleComponent,
+//
+//   ],
+//   providers:    [
+//     // HeroService
+//   ],
+//   bootstrap:    [
+//     AppComponent
+//   ]
+// })
 
 
 
@@ -132,6 +136,21 @@ import { HeroesService }  from './DependencyInjection/heroes.service';
 //   bootstrap: [ AppComponent ]
 // })
 
+
+/* -- Form -- */
+@NgModule({
+  imports:      [
+    BrowserModule,
+    FormsModule,
+  ],
+  declarations: [
+    // AppComponent,
+    HeroFormComponent,
+  ],
+  bootstrap:    [
+    HeroFormComponent
+  ]
+})
 
 
 export class AppModule { }

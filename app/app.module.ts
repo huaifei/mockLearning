@@ -65,35 +65,35 @@ import { HeroFormComponent } from './Form/hero-form.component';
 /* ------------------------------------------------------------------------------------------ */
 
 /* -- mock Learning Events -- */
-// @NgModule({
-//   imports:      [
-//     BrowserModule,
-//     FormsModule,
-//     AppRoutingModule,
-//     HttpModule,
-//     EventDetailsRoutingModule,
-//     InMemoryWebApiModule.forRoot(InMemoryLearningDataService),
-//   ],
-//   declarations: [
-//     AppComponent,
-//
-//     ActivityComponent,
-//     EventDetailsComponent,
-//     ParticipantComponent,
-//     VenueComponent,
-//     AtopComponent,
-//     CardsComponent,
-//     PresenterComponent,
-//     ScheduleComponent,
-//
-//   ],
-//   providers:    [
-//     // HeroService
-//   ],
-//   bootstrap:    [
-//     AppComponent
-//   ]
-// })
+@NgModule({
+  imports:      [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpModule,
+    EventDetailsRoutingModule,
+    InMemoryWebApiModule.forRoot(InMemoryLearningDataService),
+  ],
+  declarations: [
+    AppComponent,
+
+    ActivityComponent,
+    EventDetailsComponent,
+    ParticipantComponent,
+    VenueComponent,
+    AtopComponent,
+    CardsComponent,
+    PresenterComponent,
+    ScheduleComponent,
+
+  ],
+  providers:    [
+    // HeroService
+  ],
+  bootstrap:    [
+    AppComponent
+  ]
+})
 
 
 
@@ -138,19 +138,19 @@ import { HeroFormComponent } from './Form/hero-form.component';
 
 
 /* -- Form -- */
-@NgModule({
-  imports:      [
-    BrowserModule,
-    FormsModule,
-  ],
-  declarations: [
-    // AppComponent,
-    HeroFormComponent,
-  ],
-  bootstrap:    [
-    HeroFormComponent
-  ]
-})
+// @NgModule({
+//   imports:      [
+//     BrowserModule,
+//     FormsModule,
+//   ],
+//   declarations: [
+//     // AppComponent,
+//     HeroFormComponent,
+//   ],
+//   bootstrap:    [
+//     HeroFormComponent
+//   ]
+// })
 
 
 export class AppModule { }

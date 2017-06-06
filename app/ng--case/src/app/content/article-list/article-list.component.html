@@ -1,0 +1,70 @@
+<!--顶部公共样式-->
+<div class="article-top row">
+  <div class="col-md-6">
+    <h5>当前搜索: <a href="#">{{currentSearch}}</a></h5>
+  </div>
+  <div class="col-md-3 col-md-offset-3">
+    <form method="get">
+      <div class="search input-group">
+        <input type="search" class="form-control" style="float: right" name="search" placeholder="Search" [(ngModel)]="currentSearch">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit" (click)="doSearch()"><i class="fa fa-search"></i></button>
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
+<!--文章列表-->
+<article *ngFor="let item of articleModels">
+  <!--时间-->
+  <div class="post-date">
+    <span class="date-month" >{{item.month}}月</span>
+    <span class="date-day" >{{item.day}}</span>
+    <span class="date-year" >{{item.year}}</span>
+  </div>
+  <div class="post-articleDO">
+    <header class="post-title">
+      <span class="text-danger" *ngIf="item.isTop">[置顶]</span>
+      <a routerLink="/aust/article/{{item.id}}" >{{item.title}}</a>
+    </header>
+    <div class="post-content">
+      <p>
+        {{item.summary}}
+      </p>
+      <div class="read_more">
+        <a routerLink="/aust/article/{{item.id}}">阅读更多</a>
+      </div>
+    </div>
+    <ul class="post-meta list-inline">
+      <li class="mate-cat fl clearfix">
+        <i class="fa fa-userDO"></i>
+        <a href="http://zhw-island.com/category/wordpress/">{{item.nickname}}</a>
+      </li>
+      <li class="meta-tabs fl clearfix">
+        <i class="fa fa-tags"></i>
+          <a href="javaScript:void(0)" rel="tag" *ngFor="let tag of item.keyword.split(',')" (click)="doTagSearch(tag)">{{tag}}</a>
+      </li>
+      <li class="mate-com fr">
+        <i class="iconfont icon-eyes"></i>
+        <span>{{item.viewcount}}</span>
+      </li>
+      <li class="meta-like fr mr0">
+        <a href="javascript:void(0)" title="Like" (click)="doLike(item)">
+          <i class="iconfont icon-heart" [ngClass]="{'text-danger': item.isVote}"></i>
+          <span>{{item.likecount}}</span>
+        </a>
+      </li>
+      <!--评论数暂时不加-->
+      <!--<li class="mate-com fr">-->
+      <!--<i class="fa fa-comments-o"></i>-->
+      <!--<span class="mate-num">91</span>-->
+      <!--</li>-->
+    </ul>
+  </div>
+</article>
+<!--一页显示20条-->
+<div *ngIf="totalItems > pageSize">
+  <pagination [boundaryLinks]="false" [totalItems]="totalItems" [(ngModel)]="currentPage"
+              (pageChanged)="pageChanged($event)" [itemsPerPage]="pageSize" class="pagination-sm"
+              previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;"></pagination>
+</div>

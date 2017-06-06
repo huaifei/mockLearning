@@ -1,0 +1,17 @@
+<div class="tips">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 tips-bg">
+      <i class="iconfont icon-tixing"></i>
+      <div class="tips-bulls">
+        <ul class="list-unstyled marquee container-css">
+          <li *ngFor="let item of tips">
+            <a routerLink="/aust/article/{{item.articleId}}" >{{item.title}}</a>
+          </li>
+          <li *ngIf="tips && tips[0]">
+            <a routerLink="/aust/article/{{tips[0].articleId}}">{{tips[0].title}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
